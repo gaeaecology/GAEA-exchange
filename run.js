@@ -2,12 +2,12 @@
 "use strict";
 var _ = require('lodash');
 var async = require('async');
-var conf = require('byteballcore/conf.js');
-var db = require('byteballcore/db.js');
-var eventBus = require('byteballcore/event_bus.js');
-var mail = require('byteballcore/mail.js');
-var headlessWallet = require('headless-byteball');
-var ValidationUtils = require("byteballcore/validation_utils.js");
+var conf = require('GAEAcore/conf.js');
+var db = require('GAEAcore/db.js');
+var eventBus = require('GAEAcore/event_bus.js');
+var mail = require('GAEAcore/mail.js');
+var headlessWallet = require('headless-GAEA');
+var ValidationUtils = require("GAEAcore/validation_utils.js");
 var book = require("./book.js");
 
 const TEMP_DATA_EXPIRY_PERIOD = 3600*1000;
@@ -16,7 +16,7 @@ headlessWallet.setupChatEventHandlers();
 
 
 function sendMessageToDevice(device_address, text){
-	var device = require('byteballcore/device.js');
+	var device = require('GAEAcore/device.js');
 	device.sendMessageToDevice(device_address, 'text', text);
 }
 

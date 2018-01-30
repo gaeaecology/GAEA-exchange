@@ -1,7 +1,7 @@
 /*jslint node: true */
 "use strict";
-var headlessWallet = require('headless-byteball');
-var eventBus = require('byteballcore/event_bus.js');
+var headlessWallet = require('headless-GAEA');
+var eventBus = require('GAEAcore/event_bus.js');
 
 const asset = 'HXY5mfMs5A8GpPDMOVt//ptnHfjsGK3/4X87VT+KVNg=';
 var my_address;
@@ -11,9 +11,9 @@ function onError(err){
 }
 
 function createDivisibleAssetPayment(){
-	var network = require('byteballcore/network.js');
-	var divisibleAsset = require('byteballcore/divisible_asset.js');
-	var walletGeneral = require('byteballcore/wallet_general.js');
+	var network = require('GAEAcore/network.js');
+	var divisibleAsset = require('GAEAcore/divisible_asset.js');
+	var walletGeneral = require('GAEAcore/wallet_general.js');
 	
 	divisibleAsset.composeAndSaveDivisibleAssetPaymentJoint({
 		asset: asset, 
